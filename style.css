@@ -1,0 +1,236 @@
+body {
+  font-family: "Open Sans Condensed", sans-serif;
+  background: #E2E1DC;
+  min-width: 150px;
+}
+
+.circle_filling, .inner_circle .inner_filling, .outside_circle .outside_filling {
+  border-radius: 50%;
+  position: absolute;
+  background: #FFF;
+  width: 95%;
+  padding-bottom: 95%;
+  top: 2.5%;
+  left: 2.5%;
+}
+
+.compass_container {
+  position: relative;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+}
+
+.outside_circle {
+  border-radius: 50%;
+  position: absolute;
+  background: #462B17;
+  width: 100%;
+  padding-bottom: 100%;
+  top: 0;
+  left: 0;
+}
+.inner_circle {
+  border-radius: 50%;
+  position: absolute;
+  background: #462B17;
+  width: 80%;
+  padding-bottom: 80%;
+  top: 10%;
+  left: 10%;
+}
+.inner_circle .inner_filling {
+  background: #F6D436;
+}
+
+.top_point {
+  width: 5%;
+  height: 0;
+  padding: 7.5% 0 0 5%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 45%;
+}
+.top_point:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin: -50px 0 0 -50px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 50px solid #462B17;
+}
+
+.bottom_point {
+  width: 5%;
+  height: 0;
+  padding: 0 0 7.5% 5%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+}
+.bottom_point:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 0 0 0 -50px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid #462B17;
+}
+
+.left_point {
+  width: 5%;
+  height: 0;
+  padding: 5% 0 5% 7.5%;
+  overflow: hidden;
+  position: absolute;
+  top: 45%;
+}
+.left_point:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin: -50px 0 0 -50px;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid #462B17;
+}
+
+.right_point {
+  width: 5%;
+  height: 0;
+  padding: 5% 2.5% 5% 0;
+  overflow: hidden;
+  position: absolute;
+  top: 45%;
+  right: 0;
+}
+.right_point:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin: -50px -50px 0 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-right: 50px solid #462B17;
+}
+
+.top_needle {
+  width: 0;
+  transform: rotate(180deg);
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 75px solid #462B17;
+  position: absolute;
+  left: 49px;
+  bottom: 57px;
+}
+.top_needle .needle_inside {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 60px solid #F87A6A;
+  position: absolute;
+  bottom: 15px;
+  right: -5px;
+}
+
+.bottom_needle {
+  width: 0;
+  transform: rotate(180deg);
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 75px solid #462B17;
+  position: absolute;
+  left: 49px;
+  top: 57px;
+}
+
+.needle {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: search linear 2s infinite alternate;
+          animation: search linear 2s infinite alternate;
+  transform-origin: center center;
+  position: absolute;
+}
+
+.inner_filling span {
+  font-weight: bold;
+  position: absolute;
+  font-size: 14px;
+}
+.inner_filling span:nth-child(1) {
+  top: 5px;
+  left: calc(50% - 5px);
+}
+.inner_filling span:nth-child(2) {
+  right: 5px;
+  top: calc(50% - 5px);
+}
+.inner_filling span:nth-child(3) {
+  bottom: 5px;
+  left: calc(50% - 5px);
+}
+.inner_filling span:nth-child(4) {
+  left: 5px;
+  top: calc(50% - 5px);
+}
+
+@-webkit-keyframes search {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(80deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes search {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(80deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+.my_social {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+}
+
+.my_social a {
+  display: inline-block;
+  height: 2.5em;
+}
+
+.my_social a img {
+  height: 1.5em;
+}
+
+.error_404 {
+  text-align: center;
+}
+
+.not_north {
+  position: relative;
+  top: 0px;
+  text-align: center;
+}
